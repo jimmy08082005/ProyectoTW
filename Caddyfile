@@ -2,9 +2,10 @@
 	admin off
 }
 
-:80 {
+:8085 {
 	root * /app/public
 	encode gzip
-	php_fastcgi localhost:9000
 	file_server
+	try_files {path} /index.php?{query}
+	php_handler
 }
