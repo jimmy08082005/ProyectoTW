@@ -15,10 +15,19 @@
                 </a>
                 
                 <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu">
-                    <li><a class="dropdown-item py-2" href="/login">Iniciar Sesión</a></li>
-                    <li><a class="dropdown-item py-2" href="/registro">Crear Cuenta</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item py-2" href="/logout">Cerrar Sesión</a></li>
+                    @guest
+                        <li><a class="dropdown-item py-2" href="/login">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item py-2" href="/registro">Crear Cuenta</a></li>
+                    @else
+                        @if (Auth::user()->role === 'admin')
+                            <li><a class="dropdown-item py-2" href="/panelAdmin">Panel de Guía</a></li>
+                        @else
+                            <li><a class="dropdown-item py-2" href="/panelUsuario">Panel de Usuario</a></li>
+                        @endif
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="/logout">Cerrar Sesión</a></li>
+                    @endguest     
                 </ul>
             </div>
         </div>
