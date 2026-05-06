@@ -29,7 +29,7 @@
                     <p><strong>Duración:</strong> 5-6 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="rutasmontaña/peñarla.html" class="btn">Ver detalles</a>
+                    <a href="/penalara" class="btn">Ver detalles</a>
                 </div>
             </div>
         </div>
