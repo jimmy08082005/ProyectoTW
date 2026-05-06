@@ -13,3 +13,6 @@ Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('v
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
 Route::get('/logout',[ControladorLogin::class, 'logout'])->name('logout');
 
+Route::post('/guardar-ruta', function () {
+    return "Formulario enviado correctamente";
+})->name('guardar-ruta');
