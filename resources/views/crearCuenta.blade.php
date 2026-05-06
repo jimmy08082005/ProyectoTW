@@ -15,33 +15,27 @@
     @include('util.cabecera') <main class="container-fluid my-5">
 
     <main class="container align-center p-5">
-        <form method="POST" action="{{route('inicia-sesion')}}">
+        <form method="POST" action="{{route('validar-registro')}}">
             @csrf
-            <div class="mb-3">
-                <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailInput"
-                name="email" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="passwordInput" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordInput"
-                name="password" required>
-            </div>
-
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberCheck"
-                name="remember">
-                <label class="form-check label" for="rememberCheck">
-                Mantener sesión iniciada</label>
-            </div>
-            <div>
-                <p>¿No tienes cuenta? <a href="{{route('registro')}}">
-                Regístrate</a></p>
-            </div>
-            <button type="submit" class="btn btn-primary">Acceder</button>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailInput"
+            name="email" required autocomplete="disable">
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordInput"
+            name="password" required>
+          </div>
+          <div class="mb-3">
+            <label for="userInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="userInput"
+            name="name" required autocomplete="disable">
+          </div>
+          <button type="submit" class="btn btn-primary">Crear Cuenta</button>
         </form>
     </main>
+
 
     <footer class="text-center py-3">
         <p class="mb-1">© 2026. Todos los derechos reservados.</p>

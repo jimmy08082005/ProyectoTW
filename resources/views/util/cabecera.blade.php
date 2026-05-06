@@ -18,7 +18,7 @@
                     <li><a class="dropdown-item py-2" href="/login">Iniciar Sesión</a></li>
                     <li><a class="dropdown-item py-2" href="/registro">Crear Cuenta</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item py-2" href="/panel-usuario">Panel de Usuario</a></li>
+                    <li><a class="dropdown-item py-2" href="/logout">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>

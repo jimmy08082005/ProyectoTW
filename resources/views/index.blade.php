@@ -14,6 +14,13 @@
     
     @include('util.cabecera') <main class="container-fluid my-5">
 
+    <div class="container">
+        <h1 class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between
+        py-4 mb-4 border-bottom">
+            Bienvenido @auth {{Auth::user()->name}} @endauth
+        </h1>
+    </div>
+
     <main class="container-fluid my-5">
         <div class="rutas-index">
             <div class="card">
