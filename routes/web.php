@@ -16,3 +16,4 @@ Route::get('/logout',[ControladorLogin::class, 'logout'])->name('logout');
 Route::post('/guardar-ruta', function () {
     return "Formulario enviado correctamente";
 })->name('guardar-ruta');
+
