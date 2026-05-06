@@ -7,16 +7,18 @@
     <title>Rutas de Montaña</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/micss.css">
+    <link rel="stylesheet" href="{{ asset('css/micss.css') }}">
 </head>
 
 <body>
      @include('util.cabecera') <main class="container-fluid my-5">
 
+    <h1 class="text-center display-1">Rutas de Montaña</h1>
+
     <main class="lista-montanias">
         <div class="card ruta-listado">
             <div class="ruta-contenido">
-                <img src="img/ascensoPeñalara.jpg" alt="Peñalara">
+                <img src="{{ asset('img/penalara.jpg') }}" alt="Peñalara">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ascenso al Pico de Peñalara</h5>
 
@@ -34,7 +36,7 @@
 
         <div class="card ruta-listado">
             <div class="ruta-contenido">
-                <img src="img/SenderoPedriza.jpeg" alt="La Pedriza">
+                <img src="{{ asset('img/pedriza.jpeg') }}" alt="La Pedriza">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Sendero de La Pedriza</h5>
 
@@ -52,7 +54,7 @@
 
         <div class="card ruta-listado">
             <div class="ruta-contenido">
-                <img src="img/Ordesa.JPG" alt="Ordesa">
+                <img src="{{ asset('img/ordesa.JPG') }}" alt="Ordesa">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Valle de Ordesa y Monte Perdido</h5>
 
@@ -69,7 +71,7 @@
 
         <div class="card ruta-listado">
             <div class="ruta-contenido">
-                <img src="img/Gredos.jpg" alt="Gredos">
+                <img src="{{ asset('img/gredos.jpg') }}" alt="Gredos">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ruta por la Sierra de Gredos</h5>
 
