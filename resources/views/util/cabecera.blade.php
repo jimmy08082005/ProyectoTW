@@ -8,12 +8,34 @@
         </a>
 
         <div class="d-flex align-items-center">
-            <div class="dropdown d-none d-lg-flex" style="position: relative; z-index: 1050;">
-                <a href="#" class="d-flex align-items-center px-2 px-md-5" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center gap-2 px-2 px-md-5" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    <span class="d-none d-md-inline" style="font-size: 18px; color: rgb(9, 238, 9);">
+                        @guest
+                            Invitado
+                        @else
+                            @if (Auth::user()->role === 'admin')
+                                Admin: {{ Auth::user()->name }}
+                            @else
+                                Usuario: {{ Auth::user()->name }}
+                            @endif
+                        @endguest
+                    </span>
                     <img src="{{ asset('img/usuario.png') }}" alt="Usuario" width="40" height="40" class="rounded-circle">
                 </a>
                 
                 <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu">
+                    <li class="d-md-none px-3 py-2 text-center fw-bold" style="color: rgb(9, 238, 9); border-bottom: 1px solid #eee;">
+                        @guest
+                            Invitado
+                        @else
+                            @if (Auth::user()->role === 'admin')
+                                Admin: {{ Auth::user()->name }}
+                            @else
+                                Usuario: {{ Auth::user()->name }}
+                            @endif
+                        @endguest
+                    </li>
                     @guest
                         <li><a class="dropdown-item py-2 text-center" href="/login">Iniciar Sesión</a></li>
                         <li><a class="dropdown-item py-2 text-center" href="/registro">Crear Cuenta</a></li>
@@ -34,28 +56,6 @@
             <label for="menu-toggle" class="menu-icon"></label>
             <div class="sidebar-overlay"></div>
             <nav class="sidebar">
-                <div class="sidebar-user-mobile d-lg-none">
-                    <div class="dropdown">
-                        <a1 href="#" class="d-flex align-items-center" id="userMenuSidebar" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('img/usuario.png') }}" alt="Usuario" width="36" height="36" class="rounded-circle">
-                        </a1>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="userMenuSidebar">
-                            @guest
-                                <li><a1 class="dropdown-item py-2 text-center" href="/login">Iniciar Sesión</a1></li>
-                                <li><a1 class="dropdown-item py-2 text-center" href="/registro">Crear Cuenta</a1></li>
-                            @else
-                                @if (Auth::user()->role === 'admin')
-                                    <li><a1 class="dropdown-item py-2 text-center" href="/panelAdmin">Panel de Guía</a1></li>
-                                @else
-                                    <li><a1 class="dropdown-item py-2 text-center" href="/panelUsuario">Panel de Usuario</a1></li>
-                                @endif
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a1 class="dropdown-item py-2 text-center" href="/logout">Cerrar Sesión</a1></li>
-                            @endguest
-                        </ul>
-                    </div>
-                </div>
                 <a href="/subidaRuta">Subir Rutas</a>
             </nav>
 

@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="css/micss.css">
 </head>
 
+@if (session('error'))
+    <div class="toast-aviso">
+        {{ session('error') }}
+    </div>
+@endif
+
+<style>
+    .toast-aviso {
+        position: fixed;
+        bottom: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color:rgb(255, 0, 0);
+        color: white;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 9999;
+        animation: desvanecer 1s ease 3s forwards;
+    }
+
+    @keyframes desvanecer {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+    }
+</style>
+
 <body>
     
     @include('util.cabecera')

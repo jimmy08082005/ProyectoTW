@@ -85,18 +85,6 @@
     color: white;
 }
 
-.sidebar-user-mobile {
-    position: absolute;
-    top: 28px;
-    left: 20px;
-    z-index: 1060;
-}
-
-.sidebar-user-mobile .dropdown-menu {
-    left: 0;
-    right: auto;
-}
-
 #menu-toggle:checked + .menu-icon + .sidebar-overlay + .sidebar,
 #menu-toggle:checked + .menu-icon + .sidebar {
     right: 0;

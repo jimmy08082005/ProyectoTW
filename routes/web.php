@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Controlador;
 use App\Http\Controllers\ControladorLogin;
+use App\Http\Controllers\ControladorRuta;
 
 Route::view('/login', "iniciarsesion")->name('login');
 Route::view('/registro', "crearCuenta")->name('registro');
-Route::view('/subidaRuta', "subidaRuta")->name('subidaRuta');
 Route::view('/', "index")->name('index');
 Route::view('/rutasMontana', "listaRutasMontaña")->name('listamontanas');
 Route::view('/rutasMontana/penalara',"rutasmontaña.penalara")->name('penalara');
@@ -16,7 +16,16 @@ Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('v
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
 Route::get('/logout',[ControladorLogin::class, 'logout'])->name('logout');
 
-Route::post('/guardar-ruta', function () {
-    return "Formulario enviado correctamente";
-})->name('guardar-ruta');
+Route::get('/subidaRuta', function () {
+    if (!auth()->check()) {
+        return redirect()->route('login')
+               ->with('error', 'Debes iniciar sesión para acceder a esta página.');
+    }
+    return view('subidaRuta');
+})->name('subidaRuta');
+
+Route::post('/subidaRuta', [ControladorRuta::class, 'store'])
+     ->middleware('auth')
+     ->name('subidaRuta.store');
+
 
