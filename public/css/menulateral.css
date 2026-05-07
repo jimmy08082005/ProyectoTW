@@ -1,0 +1,119 @@
+#menu-toggle {
+    display:none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgb(60, 255, 0);
+    color: rgb(255, 255, 255);
+    position: relative; 
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1045;
+    line-height: 1;
+}
+
+.menu-icon::before {
+    content: "\2630";
+    font-size: 30px;
+    margin-top: -6px;
+}
+
+#menu-toggle:checked + .menu-icon::before{
+    content: "\2715";
+    margin-top: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: rgb(60, 255, 0);
+    overflow-x: hidden;
+    transition: .5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1040;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.4);
+}
+
+.sidebar a {
+    padding: 16px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: all .25s ease;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #ffffff;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: rgb(29, 255, 225);
+    transition: width 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(20, 218, 20, 0.808);
+    letter-spacing: 1.5px;
+}
+
+.sidebar a:active {
+    background-color: rgba(20, 218, 20, 0.808);
+    transform: scale(0.8);
+    color: white;
+}
+
+.sidebar-user-mobile {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    z-index: 1060;
+}
+
+.sidebar-user-mobile .dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+#menu-toggle:checked + .menu-icon + .sidebar-overlay + .sidebar,
+#menu-toggle:checked + .menu-icon + .sidebar {
+    right: 0;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1039;
+    transition: opacity 0.5s;
+}
+#menu-toggle:checked ~ .sidebar-overlay {
+    display: block;
+}

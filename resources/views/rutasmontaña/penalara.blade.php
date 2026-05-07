@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    @include('util.cabecera') <main class="container-fluid my-5">
+    @include('util.cabecera')
 
     <main class="ficha">
         <a href="/rutas/montana" class="atras">

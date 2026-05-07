@@ -12,7 +12,7 @@
 
 <body>
     
-    @include('util.cabecera') <main class="container-fluid my-5">
+    @include('util.cabecera')
 
     <main class="container align-center p-5">
         <form method="POST" action="{{route('validar-registro')}}">

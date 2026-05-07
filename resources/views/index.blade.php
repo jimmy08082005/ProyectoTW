@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    
-    @include('util.cabecera') <main class="container-fluid my-5">
+
+    @include('util.cabecera')
 
     <div class="container">
         <h1 class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between
@@ -30,7 +30,7 @@
                     <p class="card-text">Ruta perfecta para los amantes de la montaña...</p>
                     <p class="dificultad alta"><strong>Dificultad:</strong> Alta/Media</p>
                 </div>
-                <a class="btn" href="/rutas/montana">
+                <a class="btn" href="/rutasMontana">
                     Ver Rutas
                 </a>
             </div>

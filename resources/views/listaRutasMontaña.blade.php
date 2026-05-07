@@ -11,7 +11,7 @@
 </head>
 
 <body>
-     @include('util.cabecera') <main class="container-fluid my-5">
+     @include('util.cabecera')
 
     <h1 class="text-center display-1">Rutas de Montaña</h1>
 
@@ -29,7 +29,7 @@
                     <p><strong>Duración:</strong> 5-6 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="/penalara" class="btn">Ver detalles</a>
+                    <a href="/rutasMontana/penalara" class="btn">Ver detalles</a>
                 </div>
             </div>
         </div>
