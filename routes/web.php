@@ -15,7 +15,7 @@ Route::view('/rutasMontana/penalara',"rutasmontaña.penalara")->name('penalara')
 Route::view('/rutasMontana/pedriza',"rutasmontaña.pedriza")->name('pedriza');
 Route::view('/rutasMontana/ordesa',"rutasmontaña.ordesa")->name('ordesa');
 Route::view('/rutasMontana/gredos',"rutasmontaña.gredos")->name('gredos');
-Route::view('/rutasArida', "listaRutasAridas")->name('listamontanas');
+Route::view('/rutasArida', "listaRutasAridas")->name('listaaridas');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
