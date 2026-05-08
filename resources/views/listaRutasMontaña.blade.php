@@ -47,7 +47,7 @@
                     <p><strong>Duración:</strong> 4 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="rutasmontaña/pedriza.html" class="btn">Ver detalles</a>
+                    <a href="/rutasMontana/pedriza" class="btn">Ver detalles</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                     <p><strong>Duración:</strong> 4-5 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="rutasmontaña/gredos.html" class="btn">Ver detalles</a>
+                    <a href="/rutasMontana/gredos" class="btn">Ver detalles</a>
                 </div>
             </div>
         </div>
