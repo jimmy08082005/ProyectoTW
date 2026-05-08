@@ -1,16 +1,17 @@
-<link rel="stylesheet" href="css/menulateral.css">
+<link rel="stylesheet" href="{{ asset('css/micss.css') }}">
+<link rel="stylesheet" href="{{ asset('css/menulateral.css') }}">
 
 <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 sticky-top">
     <div class="container-fluid px-md-5">
         
-        <a class="navbar-brand fw-bold fs-3 fs-md-2" href="/" style="color:rgb(9, 238, 9);">
+        <a class="navbar-brand logo-rutas fw-bold fs-3 fs-md-2" href="/">
             RutasTotal
         </a>
 
         <div class="d-flex align-items-center">
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center gap-2 px-2 px-md-5" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                    <span class="d-none d-md-inline" style="font-size: 18px; color: rgb(9, 238, 9);">
+                    <span class="usuario-texto d-none d-md-inline">
                         @guest
                             Invitado
                         @else
@@ -25,7 +26,7 @@
                 </a>
                 
                 <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="userMenu">
-                    <li class="d-md-none px-3 py-2 text-center fw-bold" style="color: rgb(9, 238, 9); border-bottom: 1px solid #eee;">
+                    <li class="d-md-none px-3 py-2 text-center fw-bold">
                         @guest
                             Invitado
                         @else
@@ -57,9 +58,10 @@
             <div class="sidebar-overlay"></div>
             <nav class="sidebar">
                 <a href="/subidaRuta">Subir Rutas</a>
+                <a href="/rutasMontana">Rutas de Montaña</a>
+                <a href="/rutasMontana">Rutas de zona Árida</a>
+                <a href="/rutasMontana">Rutas de Montaña</a>
             </nav>
-
         </div>
-
     </div>
 </nav>

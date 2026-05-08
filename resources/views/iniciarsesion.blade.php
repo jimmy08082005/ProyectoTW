@@ -7,7 +7,6 @@
     <title>Iniciar Sesión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/micss.css">
 </head>
 
 @if (session('error'))
@@ -67,7 +66,7 @@
                 <p>¿No tienes cuenta? <a href="{{route('registro')}}">
                 Regístrate</a></p>
             </div>
-            <button type="submit" class="btn btn-primary">Acceder</button>
+            <button type="submit">Acceder</button>
         </form>
     </main>
 

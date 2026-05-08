@@ -188,3 +188,18 @@ iframe {
     color: rgb(64, 90, 54);
     text-decoration: underline;
 }
+
+.logo-rutas {
+    color: rgb(137, 157, 130);
+    transition: 0.3s;
+}
+
+.logo-rutas:hover {
+    color: rgb(64, 90, 54);
+}
+
+.usuario-texto {
+    font-size: 18px;
+    color: rgb(137, 157, 130);
+    font-weight: 600;
+}

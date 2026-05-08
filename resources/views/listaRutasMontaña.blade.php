@@ -64,7 +64,7 @@
                     <p><strong>Duración:</strong> 6-7 horas</p>
                     <p class="dificultad alta"><strong>Dificultad:</strong> Alta</p>
 
-                    <a href="rutasmontaña/ordesa.html" class="btn">Ver detalles</a>
+                    <a href="/rutasMontana/ordesa" class="btn">Ver detalles</a>
                 </div>
             </div>
         </div>

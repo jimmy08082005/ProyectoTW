@@ -9,8 +9,10 @@ use App\Http\Controllers\ControladorRuta;
 Route::view('/login', "iniciarsesion")->name('login');
 Route::view('/registro', "crearCuenta")->name('registro');
 Route::view('/', "index")->name('index');
+Route::view('/contacta', "contacta")->name('contacta');
 Route::view('/rutasMontana', "listaRutasMontaña")->name('listamontanas');
 Route::view('/rutasMontana/penalara',"rutasmontaña.penalara")->name('penalara');
+Route::view('/rutasMontana/ordesa',"rutasmontaña.ordesa")->name('ordesa');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
