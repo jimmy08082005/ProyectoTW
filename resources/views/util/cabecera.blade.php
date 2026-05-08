@@ -59,7 +59,7 @@
             <nav class="sidebar">
                 <a href="/subidaRuta">Subir Rutas</a>
                 <a href="/rutasMontana">Rutas de Montaña</a>
-                <a href="/rutasMontana">Rutas de zona Árida</a>
+                <a href="/rutasMontana">Rutas de Zona Árida</a>
                 <a href="/rutasMontana">Rutas de Montaña</a>
             </nav>
         </div>

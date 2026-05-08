@@ -30,11 +30,11 @@
             <div class="card">
                 <img src="{{ asset('img/rutaArida.jpg') }}" class="card-img-top" alt="rutas de zonas aridas">
                 <div class="card-body">
-                    <h5 class="card-title">Rutas en zona Árida</h5>
+                    <h5 class="card-title">Rutas de Zona Árida</h5>
                     <p class="card-text">Ruta perfecta para los amantes de zonas áridas...</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media/Baja</p>
                 </div>
-                <a class="btn" href="/rutas/arida">
+                <a class="btn" href="/rutasArida">
                     Ver Rutas
                 </a>
             </div>
