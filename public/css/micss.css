@@ -16,8 +16,10 @@ footer a {
     color: black;
 }
 
+h1, 
+form label,
 .enlace-registrate{
-    color:rgb(105, 125, 99)
+    color:rgb(95, 114, 88)
 }
 
 .enlace-registrate:hover{

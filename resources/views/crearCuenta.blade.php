@@ -16,6 +16,7 @@
 
     <main class="container align-center p-5">
       <div class="row justify-content-center">
+        <h1 class="text-center display-1">Crear Cuenta</h1>
         <div class="col-md-8 p-5 shadow bg-white rounded">
             <form method="POST" action="{{route('validar-registro')}}">
               @csrf

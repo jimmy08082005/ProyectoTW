@@ -43,7 +43,7 @@
                 <img src="{{ asset('img/rutaRio.jpg') }}" class="card-img-top" alt="rutas de rio">
                 <div class="card-body">
                     <h5 class="card-title">Rutas de Río</h5>
-                    <p class="card-text">Ruta perfecta para personas que quieren vivir una experiencia...</p>
+                    <p class="card-text">Ruta perfecta para los amantes de los ríos..</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
                 </div>
                 <a class="btn" href="/rutas/rio">

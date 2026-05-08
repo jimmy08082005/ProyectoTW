@@ -12,10 +12,11 @@
 <body>
     @include('util.cabecera')
 
-    <h1 class="text-center display-1">Contacta</h1>
-
-        <div class="p-3">
-            <form>
+    <main class="container align-center p-5">
+        <div class="row justify-content-center">
+            <h1 class="text-center display-1">Contacta</h1>
+            <div class="col-md-8 p-5 shadow bg-white rounded">
+                 <form>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp"
@@ -39,7 +40,9 @@
                     <button type="submit">Enviar</button>
                 </div>
             </form>
-        </div>
+            </div>
+        </div> 
+    </main>
 
     @include('util.footer')
 
