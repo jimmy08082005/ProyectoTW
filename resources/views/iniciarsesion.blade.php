@@ -42,32 +42,38 @@
     @include('util.cabecera')
 
     <main class="container align-center p-5">
-        <form method="POST" action="{{route('inicia-sesion')}}">
-            @csrf
-            <div class="mb-3">
-                <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailInput"
-                name="email" required>
-            </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 p-5 shadow bg-white rounded">
+                <form method="POST" action="{{route('inicia-sesion')}}">
+                @csrf
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailInput"
+                    name="email" placeholder="Introduce tu correro" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="passwordInput" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordInput"
-                name="password" required>
-            </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordInput"
+                    name="password" placeholder="Introduce tu contraseña" required>
+                </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberCheck"
-                name="remember">
-                <label class="form-check label" for="rememberCheck">
-                Mantener sesión iniciada</label>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberCheck"
+                    name="remember">
+                    <label class="form-check label" for="rememberCheck">
+                    Mantener sesión iniciada</label>
+                </div>
+                <div>
+                    <p>¿No tienes cuenta? <a class="enlace-registrate"href="{{route('registro')}}">
+                    Regístrate</a></p>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Acceder</button>
+                </div>
+            </form>
             </div>
-            <div>
-                <p>¿No tienes cuenta? <a href="{{route('registro')}}">
-                Regístrate</a></p>
-            </div>
-            <button type="submit">Acceder</button>
-        </form>
+        </div>
     </main>
 
     @include('util.footer')

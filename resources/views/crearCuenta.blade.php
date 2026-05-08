@@ -15,25 +15,31 @@
     @include('util.cabecera')
 
     <main class="container align-center p-5">
-        <form method="POST" action="{{route('validar-registro')}}">
-            @csrf
-          <div class="mb-3">
-            <label for="emailInput" class="form-label">Email</label>
-            <input type="email" class="form-control" id="emailInput"
-            name="email" required autocomplete="disable">
-          </div>
-          <div class="mb-3">
-            <label for="passwordInput" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="passwordInput"
-            name="password" required>
-          </div>
-          <div class="mb-3">
-            <label for="userInput" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="userInput"
-            name="name" required autocomplete="disable">
-          </div>
-          <button type="submit" class="btn btn-primary">Crear Cuenta</button>
-        </form>
+      <div class="row justify-content-center">
+        <div class="col-md-8 p-5 shadow bg-white rounded">
+            <form method="POST" action="{{route('validar-registro')}}">
+              @csrf
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailInput"
+              name="email" placeholder="Introduce tu correro" required autocomplete="disable">
+            </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="passwordInput"
+              name="password" placeholder="Introduce tu contraseña" required>
+            </div>
+            <div class="mb-3">
+              <label for="userInput" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="userInput"
+              name="name" placeholder="Introduce tu nombre de usuario" required autocomplete="disable">
+            </div>
+            <div class="text-center">
+              <button type="submit">Crear Cuenta</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
     @include('util.footer')

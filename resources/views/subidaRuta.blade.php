@@ -16,11 +16,11 @@
 
     @include('util.cabecera')
 
-    <main class="container my-5">
+    <h1 class="text-center display-1">Publicar Nueva Ruta</h1>
+
+    <main class="container align-center p-5">
         <div class="row justify-content-center">
             <div class="col-md-8 p-5 shadow bg-white rounded">
-
-                <h2 class="text-center mb-4">Publicar Nueva Ruta</h2>
 
                 <form method="POST" action="{{ route('subidaRuta.store') }}" enctype="multipart/form-data">
 
@@ -42,37 +42,14 @@
                         </div>
                     @endif
 
-                    <style>
-                        .toast-exito {
-                            position: fixed;
-                            bottom: 300px;;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            background-color: #22c55e;
-                            color: white;
-                            padding: 14px 28px;
-                            border-radius: 8px;
-                            font-size: 15px;
-                            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-                            z-index: 9999;
-                            animation: desvanecer 1s ease 3s forwards;
-                        }
-
-                        @keyframes desvanecer {
-                            from { opacity: 1; }
-                            to   { opacity: 0; }
-                        }
-                    </style>
-
                     <div class="mb-3">
                         <label class="form-label">Nombre de la ruta</label>
                         <input type="text"
                                class="form-control"
                                name="titulo"
                                required
-                               placeholder="Ej: Ruta Sierra Nevada">
+                               placeholder="NOmbre de la ruta">
                     </div>
-
 
                     <div class="mb-3">
                         <label class="form-label">Descripción</label>
@@ -82,7 +59,6 @@
                                   placeholder="Describe la ruta..."></textarea>
                     </div>
 
-
                     <div class="mb-3">
                         <label class="form-label">Ubicación</label>
                         <input type="text"
@@ -91,7 +67,6 @@
                                required
                                placeholder="Ej: Granada">
                     </div>
-
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -114,7 +89,6 @@
                         </div>
                     </div>
 
-
                     <div class="mb-3">
                         <label class="form-label">Tipo de entorno</label>
                         <select class="form-select"
@@ -128,7 +102,6 @@
                         </select>
                     </div>
 
-
                     <div class="mb-3">
                         <label class="form-label">Dificultad</label>
                         <select class="form-select"
@@ -139,10 +112,8 @@
                             <option value="Baja">Baja</option>
                             <option value="Media">Media</option>
                             <option value="Alta">Alta</option>
-                            <option value="Extrema">Extrema</option>
                         </select>
                     </div>
-
 
                     <div class="mb-4">
                         <label class="form-label">Imagen de la ruta</label>
@@ -153,18 +124,9 @@
                                required>
                     </div>
 
-                    <div class="d-grid gap-2">
-                        <button type="submit"
-                                class="btn">
-                            Publicar Ruta
-                        </button>
-
-                        <a href="/"
-                           class="btn btn-secondary">
-                            Volver al inicio
-                        </a>
+                    <div class="text-center">
+                        <button type="submit">Subir Ruta</button>
                     </div>
-
                 </form>
             </div>
         </div>

@@ -42,7 +42,7 @@
                     <p><strong>Duración:</strong> 4-5 horas</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
 
-                    <a href="/rutasMontana/pedriza" class="btn">Ver detalles</a>
+                    <a href="/rutasArida/bardenas" class="btn">Ver detalles</a>
                 </div>
         </div>
 
@@ -57,7 +57,7 @@
                     <p><strong>Duración:</strong> 3-4 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="/rutasMontana/ordesa" class="btn">Ver detalles</a>
+                    <a href="/rutasArida/gorafe" class="btn">Ver detalles</a>
                 </div>
         </div>
 
@@ -72,7 +72,7 @@
                     <p><strong>Duración:</strong> 4-6 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="/rutasMontana/gredos" class="btn">Ver detalles</a>
+                    <a href="/rutasArida/gata" class="btn">Ver detalles</a>
                 </div>
         </div>
     </main>

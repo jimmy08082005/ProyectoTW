@@ -16,6 +16,15 @@ footer a {
     color: black;
 }
 
+.enlace-registrate{
+    color:rgb(105, 125, 99)
+}
+
+.enlace-registrate:hover{
+    color:rgb(181, 198, 176);
+    cursor: pointer;
+}
+
 header {
     background-color: rgb(236, 239, 235);
 }
@@ -96,6 +105,11 @@ form button:hover {
     width: 100%;
     height: 180px;
     object-fit: cover;
+}
+
+.ficha img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .ruta-contenido {
@@ -208,4 +222,24 @@ iframe {
     font-size: 18px;
     color: rgb(137, 157, 130);
     font-weight: 600;
+}
+
+.toast-exito {
+    position: fixed;
+    bottom: 300px;;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(137, 157, 130);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    animation: desvanecer 1s ease 3s forwards;
+}
+
+@keyframes desvanecer {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
