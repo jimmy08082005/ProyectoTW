@@ -25,18 +25,17 @@
         
             <h3>Descripción</h3>
             <p>
-                La Sierra de Gredos es uno de los destinos de montaña más impresionantes del centro de España.
-                Esta ruta recorre paisajes de alta montaña con lagunas glaciares, formaciones rocosas y fauna salvaje como la
-                cabra montés.
-                Es una ruta exigente pero muy completa, ideal para senderistas con algo de experiencia.
+               El Desierto de Tabernas es el único desierto propiamente dicho de Europa. 
+               Sus paisajes áridos, cañones secos y formaciones erosionadas han sido escenario 
+               de numerosas películas del western.
             </p>
         
-            <p><strong>Duración:</strong> 5-6 horas</p>
+            <p><strong>Duración:</strong> 3-4 horas</p>
             <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
-            <p><strong>Distancia:</strong> 15 km</p>
+            <p><strong>Distancia:</strong> 8-12 km</p>
             <p><strong>Tipo de ruta:</strong> Circular</p>
-            <p><strong>Altitud máxima:</strong> 2.592 m (Almanzor)</p>
-            <p><strong>Recomendado:</strong> Primavera, verano y otoño</p>
+            <p><strong>Altitud máxima:</strong> 500 m</p>
+            <p><strong>Recomendado:</strong> Otoño, invierno y primavera (evitar verano)</p>
         </div>
 
         <div class="lista-resenas">
@@ -77,11 +76,11 @@
         </div>
 
         <div class="ubicacion">
-            <h3>Ubicación: Sierra de Gredos</h3>
+            <h3>Ubicación: Almería - Andalucía</h3>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13296.930149472186!2d-5.099346133800222!3d40.29971645857224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f89be2d37452b%3A0x2f77e1e363a316d4!2sSierra%20de%20Gredos!5e1!3m2!1ses!2ses!4v1777730182598!5m2!1ses!2ses">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12745.437594671172!2d-2.460697834808341!3d37.0012214917152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7aa0bb2b0f7187%3A0xcc8e564e55726f59!2sTabernas!5e0!3m2!1ses!2ses!4v1778253728866!5m2!1ses!2ses">
             </iframe>
-        </div>
+        </div> 
     </main>
 
     @include('util.footer')

@@ -78,7 +78,8 @@ form button:hover {
     text-decoration: underline;
 }
 
-.lista-montanias{
+.lista-montanias,
+.lista-aridas{
     margin: 10px;
 }
 
@@ -88,8 +89,13 @@ form button:hover {
     margin: 20px auto;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.ruta-listado img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .ruta-contenido {

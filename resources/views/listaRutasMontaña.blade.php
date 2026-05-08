@@ -17,7 +17,6 @@
 
     <main class="lista-montanias">
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/penalara.jpg') }}" alt="Peñalara">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ascenso al Pico de Peñalara</h5>
@@ -31,11 +30,9 @@
 
                     <a href="/rutasMontana/penalara" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/pedriza.jpeg') }}" alt="La Pedriza">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Sendero de La Pedriza</h5>
@@ -49,11 +46,9 @@
 
                     <a href="/rutasMontana/pedriza" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/ordesa.JPG') }}" alt="Ordesa">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Valle de Ordesa y Monte Perdido</h5>
@@ -66,11 +61,9 @@
 
                     <a href="/rutasMontana/ordesa" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/gredos.jpg') }}" alt="Gredos">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ruta por la Sierra de Gredos</h5>
@@ -83,7 +76,6 @@
 
                     <a href="/rutasMontana/gredos" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
     </main>
 

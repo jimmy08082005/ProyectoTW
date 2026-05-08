@@ -15,9 +15,8 @@
 
     <h1 class="text-center display-1">Rutas de zona Árida</h1>
 
-    <main class="lista-montanias">
+    <main class="lista-aridas">
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/tabernas.jpg') }}" alt="Tabernas">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Desierto de Tabernas</h5>
@@ -28,13 +27,11 @@
                     <p><strong>Duración:</strong> 3-4 horas</p>
                     <p class="dificultad media"><strong>Dificultad:</strong> Media</p>
 
-                    <a href="/rutasMontana/penalara" class="btn">Ver detalles</a>
+                    <a href="/rutasArida/tabernas" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/bardenas.jpg') }}" alt="Bardenas">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Bardenas Reales</h5>
@@ -47,11 +44,9 @@
 
                     <a href="/rutasMontana/pedriza" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/gorafe.jpg') }}" alt="Gorafe">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Desierto de Gorafe</h5>
@@ -64,11 +59,9 @@
 
                     <a href="/rutasMontana/ordesa" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
 
         <div class="card ruta-listado">
-            <div class="ruta-contenido">
                 <img src="{{ asset('img/gata.jpg') }}" alt="Cabo de Gata">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Parque Natural de Cabo de Gata</h5>
@@ -81,7 +74,6 @@
 
                     <a href="/rutasMontana/gredos" class="btn">Ver detalles</a>
                 </div>
-            </div>
         </div>
     </main>
 
