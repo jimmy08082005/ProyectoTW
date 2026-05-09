@@ -17,7 +17,7 @@
 
     <main class="lista-aridas">
         <div class="card ruta-listado">
-                <img src="{{ asset('img/cares.jpg') }}" alt="Tabernas">
+                <img src="{{ asset('img/cares.jpg') }}" alt="Cares">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ruta del Cares</h5>
 
@@ -27,12 +27,12 @@
                     <p><strong>Duración:</strong> 4-5 horas</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
 
-                    <a href="/rutasArida/tabernas" class="btn">Ver detalles</a>
+                    <a href="/rutasRio/cares" class="btn">Ver detalles</a>
                 </div>
         </div>
 
         <div class="card ruta-listado">
-                <img src="{{ asset('img/cabriel.jpg') }}" alt="Bardenas">
+                <img src="{{ asset('img/cabriel.jpg') }}" alt="Cabriel">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Las Chorreras del Cabriel</h5>
 
@@ -42,12 +42,12 @@
                     <p><strong>Duración:</strong> 2-3 horas</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
 
-                    <a href="/rutasArida/bardenas" class="btn">Ver detalles</a>
+                    <a href="/rutasRio/cabriel" class="btn">Ver detalles</a>
                 </div>
         </div>
 
         <div class="card ruta-listado">
-                <img src="{{ asset('img/borosa.jpg') }}" alt="Gorafe">
+                <img src="{{ asset('img/borosa.jpg') }}" alt="Borosa">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Ruta del Río Borosa</h5>
 
@@ -57,12 +57,12 @@
                     <p><strong>Duración:</strong> 4 horas</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
 
-                    <a href="/rutasArida/gorafe" class="btn">Ver detalles</a>
+                    <a href="/rutasRio/borosa" class="btn">Ver detalles</a>
                 </div>
         </div>
 
         <div class="card ruta-listado">
-                <img src="{{ asset('img/algar.jpeg') }}" alt="Cabo de Gata">
+                <img src="{{ asset('img/algar.jpeg') }}" alt="Algar">
                 <div class="ruta-info card-body">
                     <h5 class="card-title">Fuentes del Algar</h5>
 
@@ -72,7 +72,7 @@
                     <p><strong>Duración:</strong> 1-2 horas</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
 
-                    <a href="/rutasArida/gata" class="btn">Ver detalles</a>
+                    <a href="/rutasRio/algar" class="btn">Ver detalles</a>
                 </div>
         </div>
     </main>

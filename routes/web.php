@@ -21,6 +21,10 @@ Route::view('/rutasArida/bardenas',"rutasaridas.bardenas")->name('bardenas');
 Route::view('/rutasArida/gorafe',"rutasaridas.gorafe")->name('gorafe');
 Route::view('/rutasArida/gata',"rutasaridas.gata")->name('gata');
 Route::view('/rutasRio', "listaRutasRios")->name('listarios');
+Route::view('/rutasRio/cares',"rutasrios.cares")->name('cares');
+Route::view('/rutasRio/cabriel',"rutasrios.cabriel")->name('cabriel');
+Route::view('/rutasRio/borosa',"rutasrios.borosa")->name('borosa');
+Route::view('/rutasRio/algar',"rutasrios.algar")->name('algar');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
