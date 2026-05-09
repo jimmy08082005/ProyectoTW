@@ -47,7 +47,7 @@
                                class="form-control"
                                name="titulo"
                                required
-                               placeholder="NOmbre de la ruta">
+                               placeholder="Nombre de la ruta">
                     </div>
 
                     <div class="mb-3">

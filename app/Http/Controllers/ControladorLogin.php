@@ -22,7 +22,7 @@ class ControladorLogin extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('panelUsuario'));
     }
 
     public function login(Request $request){
@@ -37,7 +37,7 @@ class ControladorLogin extends Controller
 
             $request->session()->regenerate();
 
-            return redirect(route('index'));
+            return redirect(route('panelUsuario'));
         }
         else{
             return redirect('login');

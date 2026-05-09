@@ -43,6 +43,7 @@
                     @else
                         @if (Auth::user()->role === 'admin')
                             <li><a class="dropdown-item py-2 text-center" href="/panelAdmin">Panel de Guía</a></li>
+                            <li><a class="dropdown-item py-2 text-center" href="/panelUsuario">Panel de Usuario</a></li>
                         @else
                             <li><a class="dropdown-item py-2 text-center" href="/panelUsuario">Panel de Usuario</a></li>
                         @endif

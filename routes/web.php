@@ -25,6 +25,8 @@ Route::view('/rutasRio/cares',"rutasrios.cares")->name('cares');
 Route::view('/rutasRio/cabriel',"rutasrios.cabriel")->name('cabriel');
 Route::view('/rutasRio/borosa',"rutasrios.borosa")->name('borosa');
 Route::view('/rutasRio/algar',"rutasrios.algar")->name('algar');
+Route::view('/panelUsuario', 'panelUsuario')->middleware('auth')->name('panelUsuario');
+Route::view('/panelAdmin', "panelGuia")->name('panelGuia');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
