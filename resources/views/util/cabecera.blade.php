@@ -62,6 +62,7 @@
                 <a href="/rutasMontana">Rutas de Montaña</a>
                 <a href="/rutasArida">Rutas de Zona Árida</a>
                 <a href="/rutasRio">Rutas de Río</a>
+                <a href="/rutasSubidas">Rutas de la Comunidad</a>
             </nav>
         </div>
     </div>

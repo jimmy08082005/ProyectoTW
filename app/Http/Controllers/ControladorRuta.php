@@ -40,4 +40,16 @@ class ControladorRuta extends Controller
         return redirect()->route('subidaRuta')
                          ->with('success', '¡Ruta publicada correctamente!');
     }
+
+    public function mostrarRutas()
+    {
+        $rutas = Ruta::all();
+        return view('rutasSubidas', compact('rutas'));
+    }
+
+    public function mostrarDetallesRuta($id)
+    {
+        $ruta = Ruta::findOrFail($id);
+        return view('rutasUsuarios.detallesRutas', compact('ruta'));
+    }
 }

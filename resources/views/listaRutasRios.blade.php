@@ -25,7 +25,7 @@
                     y paisajes espectaculares de los Picos de Europa.</p>
                     <p><strong>Localización:</strong>  Asturias y León</p>
                     <p><strong>Duración:</strong> 4-5 horas</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
 
                     <a href="/rutasRio/cares" class="btn">Ver detalles</a>
                 </div>
@@ -40,7 +40,7 @@
                     aguas cristalinas del río Cabriel.</p>
                     <p><strong>Localización:</strong> Cuenca - Castilla-La Mancha</p>
                     <p><strong>Duración:</strong> 2-3 horas</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
 
                     <a href="/rutasRio/cabriel" class="btn">Ver detalles</a>
                 </div>
@@ -55,7 +55,7 @@
                     y piscinas naturales en plena Sierra de Cazorla.</p>
                     <p><strong>Localización:</strong> Jaén - Andalucía</p>
                     <p><strong>Duración:</strong> 4 horas</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
 
                     <a href="/rutasRio/borosa" class="btn">Ver detalles</a>
                 </div>
@@ -70,7 +70,7 @@
                     junto al río Algar.</p>
                     <p><strong>Localización:</strong> Alicante - Comunidad Valenciana</p>
                     <p><strong>Duración:</strong> 1-2 horas</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
 
                     <a href="/rutasRio/algar" class="btn">Ver detalles</a>
                 </div>

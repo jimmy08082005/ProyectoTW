@@ -31,7 +31,7 @@
             </p>
         
             <p><strong>Duración:</strong> 4-5 horas</p>
-            <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+            <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
             <p><strong>Distancia:</strong> 10-15 km</p>
             <p><strong>Tipo de ruta:</strong> Circular</p>
             <p><strong>Altitud máxima:</strong> 600 m</p>

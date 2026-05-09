@@ -40,7 +40,7 @@
                     y formaciones de arcilla erosionadas.</p>
                     <p><strong>Localización:</strong> Navarra</p>
                     <p><strong>Duración:</strong> 4-5 horas</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
 
                     <a href="/rutasArida/bardenas" class="btn">Ver detalles</a>
                 </div>

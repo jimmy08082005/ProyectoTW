@@ -44,4 +44,7 @@ Route::post('/subidaRuta', [ControladorRuta::class, 'store'])
      ->middleware('auth')
      ->name('subidaRuta.store');
 
+Route::get('/rutasSubidas', [ControladorRuta::class, 'mostrarRutas'])->name('rutasSubidas');
+Route::get('/rutasSubidas/{id}', [ControladorRuta::class, 'mostrarDetallesRuta'])->name('rutasSubidas.mostrarDetallesRuta');
+
 

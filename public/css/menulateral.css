@@ -24,6 +24,7 @@
 .menu-icon::before {
     content: "\2630";
     font-size: 24px;
+    margin-top: -5px;
 }
 
 #menu-toggle:checked + .menu-icon::before{
