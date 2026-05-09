@@ -60,7 +60,7 @@
                 <a href="/subidaRuta">Subir Rutas</a>
                 <a href="/rutasMontana">Rutas de Montaña</a>
                 <a href="/rutasArida">Rutas de Zona Árida</a>
-                <a href="/rutasMontana">Rutas de Montaña</a>
+                <a href="/rutasRio">Rutas de Río</a>
             </nav>
         </div>
     </div>

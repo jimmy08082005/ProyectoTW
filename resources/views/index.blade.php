@@ -46,7 +46,7 @@
                     <p class="card-text">Ruta perfecta para los amantes de los ríos..</p>
                     <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
                 </div>
-                <a class="btn" href="/rutas/rio">
+                <a class="btn" href="/rutasRio">
                     Ver Rutas
                 </a>
             </div>

@@ -20,6 +20,7 @@ Route::view('/rutasArida/tabernas',"rutasaridas.tabernas")->name('tabernas');
 Route::view('/rutasArida/bardenas',"rutasaridas.bardenas")->name('bardenas');
 Route::view('/rutasArida/gorafe',"rutasaridas.gorafe")->name('gorafe');
 Route::view('/rutasArida/gata',"rutasaridas.gata")->name('gata');
+Route::view('/rutasRio', "listaRutasRios")->name('listarios');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
