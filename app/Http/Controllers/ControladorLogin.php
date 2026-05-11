@@ -39,9 +39,10 @@ class ControladorLogin extends Controller
 
             return redirect(route('panelUsuario'));
         }
-        else{
-            return redirect('login');
-        }
+        
+        return back()->withErrors([
+            'email' => 'El email o la contraseña son incorrectos',
+        ])->onlyInput('email');
     }
 
     public function logout(Request $request){

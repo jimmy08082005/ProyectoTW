@@ -54,5 +54,3 @@ Route::get('/rutasSubidas/{id}', [ControladorRuta::class, 'mostrarDetallesRuta']
 Route::post('/rutasSubidas/{ruta_id}/resena', [ControladorResena::class, 'store'])
      ->middleware('auth')
      ->name('resena.store');
-
-

@@ -82,7 +82,7 @@
                     <button type="submit" class="btn">Publicar reseña</button>
                 </form>
             @else
-                <p class="text-muted"><a href="/login">Inicia sesión</a> para escribir una reseña.</p>
+                <p class="text-muted"><a class="enlace-registrate" href="/login">Inicia sesión</a> para escribir una reseña.</p>
             @endauth
         </div>
 

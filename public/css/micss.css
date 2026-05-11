@@ -16,6 +16,7 @@ footer a {
     color: black;
 }
 
+.lista-rutas-subidas h3,
 .validar-rutas h3,
 .rutas-oficiales h3,
 .card h5,
@@ -164,6 +165,7 @@ form button:hover {
     gap: 20px;
 }
 
+.lista-rutas-subidas,
 .rutas-oficiales,
 .validar-rutas,
 .descripcion,
@@ -177,6 +179,8 @@ form button:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
+.lista-rutas-subidas,
+.lista-favoritos,
 .rutas-oficiales,
 .validar-rutas,
 .lista-resenas {
@@ -283,4 +287,21 @@ iframe {
 .rating input[type="radio"]:checked ~ label i {
     content: "\f588";
     color: rgb(19, 68, 2);
+}
+
+.alerta-errologin {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 10px auto;
+
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.alerta-errologin::before {
+    content: "⚠️";
+    margin-right: 6px;
 }
