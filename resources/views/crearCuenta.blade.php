@@ -18,17 +18,28 @@
       <div class="row justify-content-center">
         <h1 class="text-center display-1">Crear Cuenta</h1>
         <div class="col-md-8 p-5 shadow bg-white rounded">
+          @if ($errors->any())
+              <div class="alerta-errorcrear">
+                  <ul class="mb-0">
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
             <form method="POST" action="{{route('validar-registro')}}">
               @csrf
             <div class="mb-3">
               <label for="emailInput" class="form-label">Email</label>
               <input type="email" class="form-control" id="emailInput"
-              name="email" placeholder="Introduce tu correro" required autocomplete="disable">
+              name="email" placeholder="Introduce tu correo"
+              value="{{ old('email') }}" required autocomplete="off">
             </div>
             <div class="mb-3">
               <label for="passwordInput" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="passwordInput"
-              name="password" placeholder="Introduce tu contraseña" required>
+              <input type="text" class="form-control" id="userInput"
+              name="name" placeholder="Introduce tu nombre de usuario"
+              value="{{ old('name') }}" required autocomplete="off">
             </div>
             <div class="mb-3">
               <label for="userInput" class="form-label">Nombre de Usuario</label>

@@ -12,6 +12,22 @@ class ControladorLogin extends Controller
 {
     public function register(Request $request){
 
+         $request->validate([
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
+        ], [
+            'name.required' => 'El nombre es obligatorio',
+            'name.min' => 'El nombre debe tener al menos 3 caracteres',
+
+            'email.required' => 'El email es obligatorio',
+            'email.email' => 'Introduce un email válido',
+            'email.unique' => 'Este email ya está registrado',
+
+            'password.required' => 'La contraseña es obligatoria',
+            'password.min' => 'La contraseña debe tener al menos 6 caracteres',
+        ]);
+
         $user = new User();
 
         $user->name = $request->name;
