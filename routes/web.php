@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controlador;
 use App\Http\Controllers\ControladorLogin;
 use App\Http\Controllers\ControladorRuta;
+use App\Http\Controllers\ControladorResena;
 
 Route::view('/login', "iniciarsesion")->name('login');
 Route::view('/registro', "crearCuenta")->name('registro');
@@ -46,5 +47,9 @@ Route::post('/subidaRuta', [ControladorRuta::class, 'store'])
 
 Route::get('/rutasSubidas', [ControladorRuta::class, 'mostrarRutas'])->name('rutasSubidas');
 Route::get('/rutasSubidas/{id}', [ControladorRuta::class, 'mostrarDetallesRuta'])->name('rutasSubidas.mostrarDetallesRuta');
+
+Route::post('/rutasSubidas/{ruta_id}/resena', [ControladorResena::class, 'store'])
+     ->middleware('auth')
+     ->name('resena.store');
 
 

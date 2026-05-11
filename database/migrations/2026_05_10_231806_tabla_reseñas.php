@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rutas', function (Blueprint $table) {
+        Schema::create('resenas', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('descripcion')->nullable();
-            $table->string('localizacion');
-            $table->integer('duracion');
-            $table->enum('dificultad', ['Baja', 'Media', 'Alta']);
-            $table->decimal('distancia', 8, 2);
-            $table->string('tipo_de_ruta');
-            $table->string('imagen');
+            $table->foreignId('ruta_id')->constrained('rutas')->onDelete('cascade');
+            $table->string('usuario');
+            $table->text('descripcion');
+            $table->decimal('valoracion', 2, 1);
             $table->timestamps();
         });
     }

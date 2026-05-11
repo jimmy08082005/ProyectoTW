@@ -50,6 +50,7 @@ class ControladorRuta extends Controller
     public function mostrarDetallesRuta($id)
     {
         $ruta = Ruta::findOrFail($id);
-        return view('rutasUsuarios.detallesRutas', compact('ruta'));
+        $resenas = $ruta->resenas()->with('fotografias')->get();
+        return view('rutasUsuarios.detallesRutas', compact('ruta', 'resenas'));
     }
 }

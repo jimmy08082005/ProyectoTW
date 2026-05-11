@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rutas', function (Blueprint $table) {
+        Schema::create('fotografias_resena', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('descripcion')->nullable();
-            $table->string('localizacion');
-            $table->integer('duracion');
-            $table->enum('dificultad', ['Baja', 'Media', 'Alta']);
-            $table->decimal('distancia', 8, 2);
-            $table->string('tipo_de_ruta');
+            $table->foreignId('resena_id')->constrained('resenas')->onDelete('cascade');
             $table->string('imagen');
             $table->timestamps();
         });

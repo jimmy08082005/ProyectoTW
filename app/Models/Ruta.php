@@ -19,4 +19,9 @@ class Ruta extends Model
         'imagen',
         'usuario',
     ];
+
+    public function resenas()
+    {
+        return $this->hasMany(Resena::class, 'ruta_id');
+    }
 }

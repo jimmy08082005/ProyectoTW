@@ -258,3 +258,29 @@ iframe {
     from { opacity: 1; }
     to   { opacity: 0; }
 }
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating label {
+    cursor: pointer;
+    color: rgb(200, 210, 198);
+    font-size: 18px;
+}
+
+.rating label:hover i::before,
+.rating label:hover ~ label i::before {
+    color: rgb(64, 90, 54);
+}
+
+.rating .rating-radio {
+    display: none;
+}
+
+.rating input[type="radio"]:checked ~ label i {
+    content: "\f588";
+    color: rgb(19, 68, 2);
+}

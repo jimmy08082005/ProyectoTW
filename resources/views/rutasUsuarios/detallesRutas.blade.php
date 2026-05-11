@@ -35,10 +35,96 @@
         </div>
 
         <div class="lista-resenas">
+            <h3>Publica tu Reseña</h3>
+
+            @auth
+                <form method="POST" action="{{ route('resena.store', $ruta->id) }}" enctype="multipart/form-data">
+                    @csrf
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger mb-3">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <div class="mb-3">
+                        <label class="form-label">Tu reseña</label>
+                        <textarea class="form-control" name="descripcion" rows="3" required
+                                placeholder="Escribe tu experiencia..."></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Valoración</label>
+                        <div class="rating">
+                            <input type="radio" name="valoracion" id="star-5" class="rating-radio" value="5">
+                            <label for="star-5"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="valoracion" id="star-4" class="rating-radio" value="4">
+                            <label for="star-4"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="valoracion" id="star-3" class="rating-radio" value="3">
+                            <label for="star-3"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="valoracion" id="star-2" class="rating-radio" value="2">
+                            <label for="star-2"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="valoracion" id="star-1" class="rating-radio" value="1">
+                            <label for="star-1"><i class="bi bi-star-fill"></i></label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fotografías (opcional, puedes subir varias)</label>
+                        <input type="file" class="form-control" name="imagenes[]"
+                            accept="image/*" multiple>
+                    </div>
+
+                    <button type="submit" class="btn">Publicar reseña</button>
+                </form>
+            @else
+                <p class="text-muted"><a href="/login">Inicia sesión</a> para escribir una reseña.</p>
+            @endauth
+        </div>
+
+        <div class="lista-resenas">
             <h3>Reseñas</h3>
-            <p class="text-muted">Aún no hay reseñas para esta ruta.</p>
+            @forelse ($resenas as $resena)
+                <div class="resena">
+                    <p><strong>{{ $resena->usuario }}:</strong> {{ $resena->descripcion }}</p>
+                    <div class="estrellas">
+                        @for ($i = 1; $i <= 5; $i++)
+                            @if ($i <= floor($resena->valoracion))
+                                <i class="bi bi-star-fill"></i>
+                            @else
+                                <i class="bi bi-star"></i>
+                            @endif
+                        @endfor
+                    </div>
+
+                    @if ($resena->fotografias->count() > 0)
+                        <div class="d-flex gap-2 flex-wrap mt-2">
+                            @foreach ($resena->fotografias as $foto)
+                                <a href="{{ asset($foto->imagen) }}" target="_blank">
+                                    <img src="{{ asset($foto->imagen) }}" width="100" class="rounded">
+                                </a>
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
+            @empty
+                <p class="text-muted">Aún no hay reseñas para esta ruta.</p>
+            @endforelse
+        </div>
+
+        <div class="ubicacion">
+            <h3>Ubicación: {{ $ruta->localizacion }}</h3>
+            <iframe
+                src="https://www.google.com/maps?q={{ urlencode($ruta->localizacion) }}&output=embed">
+            </iframe>
         </div>
     </main>
+
+    
 
     @include('util.footer')
 
