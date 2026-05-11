@@ -24,18 +24,51 @@
         </div>
 
         <div class="lista-resenas">
-            <h3>Mis Reseñas</h3>
+            <h3>Reseñas</h3>
+            @forelse ($resenas as $resena)
+                <div class="resena">
+                    <p class="mb-1">
+                        <strong>Ruta:</strong>
+                         <a class="enlace-registrate" href="{{ route('rutasSubidas.mostrarDetallesRuta', $resena->ruta->id) }}">
+                            {{ $resena->ruta->titulo }}
+                        </a>
+                    </p>
 
-            <div class="resena">
-                <p><strong>{{ auth()->user()->name }}:</strong> texto....</p>
-                <div class="estrellas">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
+                    <p>
+                        <strong>{{ $resena->usuario }}:</strong>
+                        {{ $resena->descripcion }}
+                    </p>
+
+                    <div class="estrellas">
+                        @for ($i = 1; $i <= 5; $i++)
+                            @if ($i <= floor($resena->valoracion))
+                                <i class="bi bi-star-fill"></i>
+                            @else
+                                <i class="bi bi-star"></i>
+                            @endif
+                        @endfor
+                    </div>
+
+                    @if ($resena->fotografias->count() > 0)
+                        <div class="d-flex gap-2 flex-wrap mt-2">
+                            @foreach ($resena->fotografias as $foto)
+                                <a href="{{ asset($foto->imagen) }}" target="_blank">
+                                    <img src="{{ asset($foto->imagen) }}"
+                                        width="100"
+                                        class="rounded">
+                                </a>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
-            </div>
+
+            @empty
+
+                <p class="text-muted">
+                    Aún no hay reseñas para esta ruta.
+                </p>
+
+            @endforelse
         </div>
     </main>
 

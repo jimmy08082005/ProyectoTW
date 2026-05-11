@@ -38,4 +38,14 @@ class ControladorResena extends Controller
 
         return redirect()->back()->with('success', '¡Reseña publicada correctamente!');
     }
+
+    public function misResenas()
+    {
+        $resenas = Resena::where('usuario', auth()->user()->name)
+            ->with('fotografias')
+            ->latest()
+            ->get();
+
+        return view('panelUsuario', compact('resenas'));
+    }
 }
