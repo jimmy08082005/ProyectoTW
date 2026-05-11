@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Rutas de Río</h5>
                     <p class="card-text">Ruta perfecta para los amantes de los ríos..</p>
-                    <p class="dificultad facil"><strong>Dificultad:</strong> Baja</p>
+                    <p class="dificultad baja"><strong>Dificultad:</strong> Baja</p>
                 </div>
                 <a class="btn" href="/rutasRio">
                     Ver Rutas
