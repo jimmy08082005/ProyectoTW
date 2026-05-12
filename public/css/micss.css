@@ -448,23 +448,24 @@ iframe {
 }
 
 .podio-segundo {
-    width: 280px;
+    width: 320px;
 }
 
 .podio-segundo img {
-    height: 190px;
+    height: 170px;
 }
 
 .podio-tercero {
-    width: 280px;
+    width: 320px;
 }
 
 .podio-tercero img {
-    height: 140px;
+    height: 120px;
 }
 
 .podio-card h5 {
     color: rgb(95, 114, 88);
+
 }
 
 .podio-card .btn {
