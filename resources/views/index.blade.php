@@ -51,6 +51,59 @@
                 </a>
             </div>
         </div>
+
+        <section class="container-fluid my-5">
+            <div class="lista-rutas-subidas">
+                <h3 class="text-center mb-4">
+                    Rutas Oficiales
+                </h3>
+
+                <div class="rutas-index">
+                    @forelse ($rutasOficiales as $validacion)
+                        <div class="card position-relative">
+                            <img src="{{ asset('img/oficial.png') }}"
+                            class="icono-oficial"
+                            alt="Ruta oficial">
+                            <img src="{{ asset($validacion->ruta->imagen) }}"
+                                class="card-img-top"
+                                alt="{{ $validacion->ruta->titulo }}">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    {{ $validacion->ruta->titulo }}
+                                </h5>
+
+                                <p class="card-text">
+                                    {{ Str::limit($validacion->ruta->descripcion, 100) }}
+                                </p>
+
+                                <p>
+                                    <strong>Localización:</strong>
+                                    {{ $validacion->ruta->localizacion }}
+                                </p>
+
+                                <p class="dificultad {{ strtolower($validacion->ruta->dificultad) }}">
+                                    <strong>Dificultad:</strong>
+                                    {{ $validacion->ruta->dificultad }}
+                                </p>
+
+                                <p>
+                                    <strong>Distancia:</strong>
+                                    {{ $validacion->ruta->distancia }} km
+                                </p>
+
+                                <a class="btn" href="/rutasSubidas/{{ $validacion->ruta->id }}">
+                                    Ver Ruta
+                                </a>
+                            </div>
+                        </div>
+                    @empty
+                        <p class="text-center text-muted">
+                            No hay rutas oficiales todavía.
+                        </p>
+                    @endforelse
+                </div>
+            </div>
+        </section>
     </main>
 
     @include('util.footer')

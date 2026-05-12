@@ -62,7 +62,9 @@
                             <div>
                                 <h5 class="card-title">{{ $validacion->ruta->titulo }}</h5>
                                 <p><strong>Subida por:</strong> {{ $validacion->ruta->usuario }}</p>
-                                <a class="btn" href="/rutasSubidas/{{ $ruta->id }}">Ver Ruta</a>
+                                <a class="btn" href="/rutasSubidas/{{ $validacion->ruta->id }}">
+                                    Ver Ruta
+                                </a>
                             </div>
                             <form method="POST" action="{{ route('admin.oficial', $validacion->ruta_id) }}">
                                 @csrf

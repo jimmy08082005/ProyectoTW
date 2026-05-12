@@ -101,7 +101,7 @@
                             accept="image/*" multiple>
                     </div>
 
-                    <button type="submit" class="btn">Publicar reseña</button>
+                    <button type="submit">Publicar reseña</button>
                 </form>
             @else
                 <p class="text-muted"><a class="enlace-registrate" href="/login">Inicia sesión</a> para escribir una reseña.</p>

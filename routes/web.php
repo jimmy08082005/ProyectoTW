@@ -11,7 +11,6 @@ use App\Http\Controllers\ControladorAdmin;
 
 Route::view('/login', "iniciarsesion")->name('login');
 Route::view('/registro', "crearCuenta")->name('registro');
-Route::view('/', "index")->name('index');
 Route::view('/contacta', "contacta")->name('contacta');
 Route::view('/rutasMontana', "listaRutasMontaña")->name('listamontanas');
 Route::view('/rutasMontana/penalara',"rutasmontaña.penalara")->name('penalara');
@@ -71,3 +70,6 @@ Route::post('/rutasSubidas/{ruta_id}/resena', [ControladorResena::class, 'store'
 Route::post('/favoritos/{ruta_id}', [ControladorFavorito::class, 'ajustarFavorito'])
      ->middleware('auth')
      ->name('favoritos.ajustarFavorito');
+
+Route::get('/', [ControladorRuta::class, 'index'])
+    ->name('index');

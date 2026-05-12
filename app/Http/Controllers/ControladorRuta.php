@@ -65,4 +65,13 @@ class ControladorRuta extends Controller
         $validacion = \App\Models\Validacion::where('ruta_id', $id)->first();
         return view('rutasUsuarios.detallesRutas', compact('ruta', 'resenas', 'esFavorito', 'validacion'));
     }
+
+    public function index()
+    {
+        $rutasOficiales = \App\Models\Validacion::with('ruta')
+            ->where('ruta_oficial', true)
+            ->get();
+
+        return view('index', compact('rutasOficiales'));
+    }
 }
