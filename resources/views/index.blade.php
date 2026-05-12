@@ -14,6 +14,13 @@
     @include('util.cabecera')
 
     <main class="container-fluid my-5">
+        
+        <div class="rutas-index">
+            <h3 class="text-center mb-4">
+                Visita Nuestras Rutas
+            </h3>
+        </div>
+
         <div class="rutas-index">
             <div class="card">
                 <img src="{{ asset('img/rutaMontaña.jpg') }}" class="card-img-top" alt="rutas de montaña">
@@ -101,6 +108,49 @@
                             No hay rutas oficiales todavía.
                         </p>
                     @endforelse
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid my-5">
+            <div class="lista-rutas-subidas">
+                <h3 class="text-center mb-4">Rutas Mejor Valoradas</h3>
+                <div class="podio">
+                    @if (isset($rutasDestacadas[1]))
+                        <div class="podio-card podio-segundo">
+                            <div class="podio-posicion">🥈</div>
+                            <img src="{{ asset($rutasDestacadas[1]->imagen) }}" alt="{{ $rutasDestacadas[1]->titulo }}">
+                            <div class="card-body">
+                                <h5>{{ $rutasDestacadas[1]->titulo }}</h5>
+                                <p><strong>Valoración media:</strong> {{ number_format($rutasDestacadas[1]->resenas_avg_valoracion ?? 0, 1) }}</p>
+                                <a class="btn" href="/rutasSubidas/{{ $rutasDestacadas[1]->id }}">Ver Ruta</a>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if (isset($rutasDestacadas[0]))
+                        <div class="podio-card podio-primero">
+                            <div class="podio-posicion">🥇</div>
+                            <img src="{{ asset($rutasDestacadas[0]->imagen) }}" alt="{{ $rutasDestacadas[0]->titulo }}">
+                            <div class="card-body">
+                                <h5>{{ $rutasDestacadas[0]->titulo }}</h5>
+                                <p><strong>Valoración media:</strong> {{ number_format($rutasDestacadas[0]->resenas_avg_valoracion ?? 0, 1) }}</p>
+                                <a class="btn" href="/rutasSubidas/{{ $rutasDestacadas[0]->id }}">Ver Ruta</a>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if (isset($rutasDestacadas[2]))
+                        <div class="podio-card podio-tercero">
+                            <div class="podio-posicion">🥉</div>
+                            <img src="{{ asset($rutasDestacadas[2]->imagen) }}" alt="{{ $rutasDestacadas[2]->titulo }}">
+                            <div class="card-body">
+                                <h5>{{ $rutasDestacadas[2]->titulo }}</h5>
+                                <p><strong>Valoración media:</strong> {{ number_format($rutasDestacadas[2]->resenas_avg_valoracion ?? 0, 1) }}</p>
+                                <a class="btn" href="/rutasSubidas/{{ $rutasDestacadas[2]->id }}">Ver Ruta</a>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </section>

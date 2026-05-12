@@ -71,7 +71,12 @@ class ControladorRuta extends Controller
         $rutasOficiales = \App\Models\Validacion::with('ruta')
             ->where('ruta_oficial', true)
             ->get();
+        
+        $rutasDestacadas = \App\Models\Ruta::withAvg('resenas', 'valoracion')
+            ->orderByDesc('resenas_avg_valoracion')
+            ->take(3)
+            ->get();
 
-        return view('index', compact('rutasOficiales'));
+        return view('index', compact('rutasOficiales', 'rutasDestacadas'));
     }
 }

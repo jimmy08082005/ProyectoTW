@@ -19,6 +19,7 @@ footer a {
 .lista-rutas-subidas h3,
 .validar-rutas h3,
 .rutas-oficiales h3,
+.rutas-index h3,
 .card h5,
 .ubicacion h3,
 .descripcion h3,
@@ -405,4 +406,73 @@ iframe {
 .ficha .icono-detalle {
     border-radius: 0;
     box-shadow: none;
+}
+
+.podio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 20px;
+}
+
+.podio-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.podio-card:hover {
+    transform: translateY(-5px);
+}
+
+.podio-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.podio-posicion {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.podio-primero {
+    width: 320px;
+}
+
+.podio-primero img {
+    height: 220px;
+}
+
+.podio-segundo {
+    width: 280px;
+}
+
+.podio-segundo img {
+    height: 190px;
+}
+
+.podio-tercero {
+    width: 280px;
+}
+
+.podio-tercero img {
+    height: 140px;
+}
+
+.podio-card h5 {
+    color: rgb(95, 114, 88);
+}
+
+.podio-card .btn {
+    color: rgb(137, 157, 130);
+    font-weight: bold;
+}
+
+.podio-card .btn:hover {
+    color: rgb(64, 90, 54);
+    text-decoration: underline;
 }
