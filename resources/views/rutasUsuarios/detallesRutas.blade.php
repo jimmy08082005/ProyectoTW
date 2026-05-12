@@ -18,7 +18,12 @@
             Volver a rutas
         </a>
 
-        <h1 class="text-center display-1">{{ $ruta->titulo }}</h1>
+        <h1 class="text-center display-1">
+            {{ $ruta->titulo }}
+            @if ($validacion && $validacion->ruta_oficial)
+                <img src="{{ asset('img/oficial.png') }}" class="icono-detalle" width="98" height="98" alt="Ruta oficial">
+            @endif
+        </h1>
 
         <div class="descripcion">
             <img src="{{ asset($ruta->imagen) }}" class="img-fluid rounded mb-3" alt="{{ $ruta->titulo }}">
@@ -32,6 +37,23 @@
             <p class="dificultad {{ strtolower($ruta->dificultad) }}"><strong>Dificultad:</strong> {{ $ruta->dificultad }}</p>
             <p><strong>Distancia:</strong> {{ $ruta->distancia }} km</p>
             <p><strong>Tipo de ruta:</strong> {{ $ruta->tipo_de_ruta }}</p>
+
+            @auth
+                <form method="POST" action="{{ route('favoritos.ajustarFavorito', $ruta->id) }}">
+                    @csrf
+                    <button type="submit" class="btn-favorito">
+                        @if ($esFavorito)
+                            <i class="bi bi-heart-fill"></i> Quitar de favoritos
+                        @else
+                            <i class="bi bi-heart"></i> Añadir a favoritos
+                        @endif
+                    </button>
+                </form>
+            @endauth
+
+            @if ($validacion)
+                <p><em>Ruta verificada por un administrador</em></p>
+            @endif
         </div>
 
         <div class="lista-resenas">

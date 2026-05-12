@@ -6,6 +6,8 @@ use App\Http\Controllers\Controlador;
 use App\Http\Controllers\ControladorLogin;
 use App\Http\Controllers\ControladorRuta;
 use App\Http\Controllers\ControladorResena;
+use App\Http\Controllers\ControladorFavorito;
+use App\Http\Controllers\ControladorAdmin;
 
 Route::view('/login', "iniciarsesion")->name('login');
 Route::view('/registro', "crearCuenta")->name('registro');
@@ -26,7 +28,6 @@ Route::view('/rutasRio/cares',"rutasrios.cares")->name('cares');
 Route::view('/rutasRio/cabriel',"rutasrios.cabriel")->name('cabriel');
 Route::view('/rutasRio/borosa',"rutasrios.borosa")->name('borosa');
 Route::view('/rutasRio/algar',"rutasrios.algar")->name('algar');
-Route::view('/panelAdmin', "panelGuia")->name('panelGuia');
 
 Route::post('/validar-registro', [ControladorLogin::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [ControladorLogin::class, 'login'])->name('inicia-sesion');
@@ -40,9 +41,21 @@ Route::get('/subidaRuta', function () {
     return view('subidaRuta');
 })->name('subidaRuta');
 
-Route::get('/panelUsuario', [ControladorResena::class, 'misResenas'])
+Route::get('/panelUsuario', [ControladorResena::class, 'InfoUsuario'])
     ->middleware('auth')
     ->name('panelUsuario');
+
+Route::get('/panelAdmin', [ControladorAdmin::class, 'panelAdmin'])
+    ->middleware('auth')->name('panelAdmin');
+
+Route::post('/admin/validar/{ruta_id}', [ControladorAdmin::class, 'validar'])
+    ->middleware('auth')->name('admin.validar');
+
+Route::delete('/admin/invalidar/{ruta_id}', [ControladorAdmin::class, 'invalidar'])
+    ->middleware('auth')->name('admin.invalidar');
+
+Route::post('/admin/oficial/{ruta_id}', [ControladorAdmin::class, 'ajustarOficial'])
+    ->middleware('auth')->name('admin.oficial');
 
 Route::post('/subidaRuta', [ControladorRuta::class, 'store'])
      ->middleware('auth')
@@ -54,3 +67,7 @@ Route::get('/rutasSubidas/{id}', [ControladorRuta::class, 'mostrarDetallesRuta']
 Route::post('/rutasSubidas/{ruta_id}/resena', [ControladorResena::class, 'store'])
      ->middleware('auth')
      ->name('resena.store');
+
+Route::post('/favoritos/{ruta_id}', [ControladorFavorito::class, 'ajustarFavorito'])
+     ->middleware('auth')
+     ->name('favoritos.ajustarFavorito');

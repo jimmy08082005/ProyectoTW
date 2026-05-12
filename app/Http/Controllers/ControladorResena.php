@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Resena;
 use App\Models\FotografiasResena;
+use App\Models\Ruta;
 
 class ControladorResena extends Controller
 {
@@ -39,13 +40,19 @@ class ControladorResena extends Controller
         return redirect()->back()->with('success', '¡Reseña publicada correctamente!');
     }
 
-    public function misResenas()
+    public function InfoUsuario()
     {
         $resenas = Resena::where('usuario', auth()->user()->name)
             ->with('fotografias')
             ->latest()
             ->get();
+        
+        $rutas = Ruta::where('usuario', auth()->user()->name)->get();
 
-        return view('panelUsuario', compact('resenas'));
+        $favoritos = \App\Models\Favorito::where('user_id', auth()->id())
+        ->with('ruta')
+        ->get();
+
+        return view('panelUsuario', compact('resenas', 'rutas', 'favoritos'));
     }
 }

@@ -44,13 +44,25 @@ class ControladorRuta extends Controller
     public function mostrarRutas()
     {
         $rutas = Ruta::all();
-        return view('rutasSubidas', compact('rutas'));
+        $favoritos = auth()->check()
+        ? \App\Models\Favorito::where('user_id', auth()->id())->pluck('ruta_id')->toArray()
+        : [];
+        $oficiales = \App\Models\Validacion::where('ruta_oficial', true)->pluck('ruta_id')->toArray();
+        $verificadas = \App\Models\Validacion::pluck('ruta_id')->toArray();
+
+        return view('rutasSubidas', compact('rutas', 'favoritos', 'oficiales', 'verificadas'));
     }
 
     public function mostrarDetallesRuta($id)
     {
         $ruta = Ruta::findOrFail($id);
         $resenas = $ruta->resenas()->with('fotografias')->get();
-        return view('rutasUsuarios.detallesRutas', compact('ruta', 'resenas'));
+        $esFavorito = auth()->check()
+        ? \App\Models\Favorito::where('ruta_id', $id)
+                               ->where('user_id', auth()->id())
+                               ->exists()
+        : false;
+        $validacion = \App\Models\Validacion::where('ruta_id', $id)->first();
+        return view('rutasUsuarios.detallesRutas', compact('ruta', 'resenas', 'esFavorito', 'validacion'));
     }
 }

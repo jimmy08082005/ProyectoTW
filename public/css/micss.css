@@ -197,6 +197,7 @@ iframe {
 
 .resena {
     padding-bottom: 10px;
+    padding-top: 10px;
     border-bottom: 1px solid #eee;
 }
 
@@ -342,4 +343,66 @@ iframe {
 @keyframes desvanecer {
     from { opacity: 1; }
     to   { opacity: 0; }
+}
+
+.lista-subidas {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    background: #fafafa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.lista-subidas h3 {
+    color: rgb(95, 114, 88);
+}
+
+.btn-favorito {
+    background: none;
+    border: none;
+    color: rgb(137, 157, 130);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.btn-favorito:hover {
+    color: #dc3545;
+    background: none;
+    border: none;
+}
+
+.btn-favorito .bi-heart-fill {
+    color: #dc3545;
+}
+
+.icono-favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #dc3545;
+    font-size: 22px;
+    z-index: 1;
+}
+
+.icono-oficial {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 48px !important;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.icono-detalle {
+    background: none;
+}
+
+.ficha .icono-detalle {
+    border-radius: 0;
+    box-shadow: none;
 }

@@ -18,9 +18,42 @@
 
         <h4 class="alerta-bienvenida">¡Bienvenido, {{ auth()->user()->name }}!</h4>
 
-        <div class="lista-favoritos">
-            <h3>Mis Favoritos</h3>
+        <div class="lista-subidas">
+            <h3>Rutas Subidas</h3>
+                <div class="row g-3 w-100">
+                    @forelse ($rutas as $ruta)
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100">
+                                <img src="{{ asset($ruta->imagen) }}" class="card-img-top" alt="{{ $ruta->titulo }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $ruta->titulo }}</h5>
+                                </div>
+                                <a class="btn" href="/rutasSubidas/{{ $ruta->id }}">Ver Ruta</a>
+                            </div>
+                        </div>
+                    @empty
+                        <p class="text-muted">Aún no has subido ninguna ruta.</p>
+                    @endforelse
+                </div>   
+        </div>
 
+        <div class="lista-favoritos">
+            <h3>Rutas Favoritas</h3>
+            <div class="row g-2 w-100">
+                @forelse ($favoritos as $favorito)
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100">
+                            <img src="{{ asset($favorito->ruta->imagen) }}" class="card-img-top" alt="{{ $favorito->ruta->titulo }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $favorito->ruta->titulo }}</h5>
+                            </div>
+                            <a class="btn" href="/rutasSubidas/{{ $favorito->ruta->id }}">Ver Ruta</a>
+                        </div>
+                    </div>
+                @empty
+                    <p class="text-muted">Aún no tienes rutas favoritas.</p>
+                @endforelse
+            </div>
         </div>
 
         <div class="lista-resenas">
