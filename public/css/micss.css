@@ -70,6 +70,7 @@ form button:hover {
     object-fit: cover;
 }
 
+.podio,
 .rutas-index{
     display: flex;
     gap: 20px;
