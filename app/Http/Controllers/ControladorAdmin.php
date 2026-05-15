@@ -31,6 +31,10 @@ class ControladorAdmin extends Controller
     public function invalidar($ruta_id)
     {
         Ruta::findOrFail($ruta_id)->delete();
+        $imagenAnterior = public_path($ruta->imagen);
+        if (file_exists($imagenAnterior)) {
+            unlink($imagenAnterior);
+        }
         return redirect()->back()->with('success', 'Ruta eliminada correctamente.');
     }
 

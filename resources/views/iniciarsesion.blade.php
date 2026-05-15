@@ -59,6 +59,11 @@
                     name="password" placeholder="Introduce tu contraseña" required>
                 </div>
 
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                    <label class="form-check-label" for="remember">Recuérdame</label>
+                </div>
+
                 <div>
                     <p>¿No tienes cuenta? <a class="enlace-registrate" href="{{route('registro')}}">
                     Regístrate</a></p>

@@ -66,16 +66,25 @@
                                     Ver Ruta
                                 </a>
                             </div>
-                            <form method="POST" action="{{ route('admin.oficial', $validacion->ruta_id) }}">
-                                @csrf
-                                <button type="submit" class="btn-icono fs-4" title="Marcar como oficial">
-                                    @if ($validacion->ruta_oficial)
-                                        <i class="bi bi-award-fill text-warning" title="Quitar oficial"></i>
-                                    @else
-                                        <i class="bi bi-award text-secondary" title="Marcar como oficial"></i>
-                                    @endif
-                                </button>
-                            </form>
+                            <div class="d-flex gap-3 fs-4">
+                                <form method="POST" action="{{ route('admin.oficial', $validacion->ruta_id) }}">
+                                    @csrf
+                                    <button type="submit" class="btn-icono fs-4" title="Marcar como oficial">
+                                        @if ($validacion->ruta_oficial)
+                                            <i class="bi bi-award-fill text-warning" title="Quitar oficial"></i>
+                                        @else
+                                            <i class="bi bi-award text-secondary" title="Marcar como oficial"></i>
+                                        @endif
+                                    </button>
+                                </form>
+                                <form method="POST" action="{{ route('admin.invalidar', $ruta->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn-icono text-danger" title="Eliminar ruta">
+                                            <i class="bi bi-x-circle"></i>
+                                        </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 @empty

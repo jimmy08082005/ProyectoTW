@@ -79,4 +79,49 @@ class ControladorRuta extends Controller
 
         return view('index', compact('rutasOficiales', 'rutasDestacadas'));
     }
+
+    public function editar($id)
+    {
+        $ruta = Ruta::findOrFail($id);
+        return view('editarRuta', compact('ruta'));
+    }
+
+    public function actualizar(Request $request, $id)
+    {
+        $ruta = Ruta::findOrFail($id);
+
+        $request->validate([
+            'titulo'       => 'required|string|max:255|unique:rutas,titulo,' . $id,
+            'descripcion'  => 'required|string',
+            'localizacion' => 'required|string|max:255',
+            'duracion'     => 'required|integer|min:0',
+            'dificultad'   => 'required|in:Baja,Media,Alta',
+            'distancia'    => 'required|numeric|min:0',
+            'tipo_de_ruta' => 'required|string|max:255',
+            'imagen'       => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
+        ]);
+
+        $ruta->titulo       = $request->titulo;
+        $ruta->descripcion  = $request->descripcion;
+        $ruta->localizacion = $request->localizacion;
+        $ruta->duracion     = $request->duracion;
+        $ruta->dificultad   = $request->dificultad;
+        $ruta->distancia    = $request->distancia;
+        $ruta->tipo_de_ruta = $request->tipo_de_ruta;
+
+        if ($request->hasFile('imagen')) {
+            $imagenAnterior = public_path($ruta->imagen);
+            if (file_exists($imagenAnterior)) {
+                unlink($imagenAnterior);
+            }
+            $archivo = $request->file('imagen');
+            $nombreArchivo = time() . '_' . $archivo->getClientOriginalName();
+            $archivo->move(public_path('img'), $nombreArchivo);
+            $ruta->imagen = 'img/' . $nombreArchivo;
+        }
+
+        $ruta->save();
+
+        return redirect()->route('panelUsuario')->with('success', '¡Ruta actualizada correctamente!');
+    }
 }

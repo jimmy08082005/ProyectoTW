@@ -29,6 +29,7 @@
                                     <h5 class="card-title">{{ $ruta->titulo }}</h5>
                                 </div>
                                 <a class="btn" href="/rutasSubidas/{{ $ruta->id }}">Ver Ruta</a>
+                                <a class="btn" href="{{ route('rutasSubidas.editar', $ruta->id) }}">Editar</a>
                             </div>
                         </div>
                     @empty

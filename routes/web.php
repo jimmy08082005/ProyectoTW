@@ -73,3 +73,9 @@ Route::post('/favoritos/{ruta_id}', [ControladorFavorito::class, 'ajustarFavorit
 
 Route::get('/', [ControladorRuta::class, 'index'])
     ->name('index');
+
+Route::get('/rutasSubidas/{id}/editar', [ControladorRuta::class, 'editar'])
+    ->middleware('auth')->name('rutasSubidas.editar');
+
+Route::put('/rutasSubidas/{id}/actualizar', [ControladorRuta::class, 'actualizar'])
+    ->middleware('auth')->name('rutasSubidas.actualizar');
