@@ -63,7 +63,7 @@
                     <div class="mb-3">
                         <label class="form-label">Tipo de entorno</label>
                         <select class="form-select" name="tipo_de_ruta" required>
-                            <option value="montana" {{ $ruta->tipo_de_ruta == 'montana' ? 'selected' : '' }}>Montaña</option>
+                            <option value="montaña" {{ $ruta->tipo_de_ruta == 'montana' ? 'selected' : '' }}>Montaña</option>
                             <option value="arida" {{ $ruta->tipo_de_ruta == 'arida' ? 'selected' : '' }}>Zona Árida</option>
                             <option value="rio" {{ $ruta->tipo_de_ruta == 'rio' ? 'selected' : '' }}>Río</option>
                         </select>

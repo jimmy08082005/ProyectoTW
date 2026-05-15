@@ -95,7 +95,7 @@
                                 required>
 
                             <option value="">Selecciona una opción</option>
-                            <option value="montana">Montaña</option>
+                            <option value="montaña">Montaña</option>
                             <option value="arida">Zona Árida</option>
                             <option value="rio">Río</option>
                         </select>
