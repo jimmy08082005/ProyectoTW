@@ -47,14 +47,17 @@ Route::get('/panelUsuario', [ControladorResena::class, 'InfoUsuario'])
 Route::get('/panelAdmin', [ControladorAdmin::class, 'panelAdmin'])
     ->middleware('auth')->name('panelAdmin');
 
-Route::post('/admin/validar/{ruta_id}', [ControladorAdmin::class, 'validar'])
+Route::post('/panelAdmin/validar/{ruta_id}', [ControladorAdmin::class, 'validar'])
     ->middleware('auth')->name('admin.validar');
 
-Route::delete('/admin/invalidar/{ruta_id}', [ControladorAdmin::class, 'invalidar'])
-    ->middleware('auth')->name('admin.invalidar');
+Route::delete('/panelAdmin/eliminar/{ruta_id}', [ControladorAdmin::class, 'eliminar'])
+    ->middleware('auth')->name('admin.eliminar');
 
-Route::post('/admin/oficial/{ruta_id}', [ControladorAdmin::class, 'ajustarOficial'])
+Route::post('/panelAdmin/oficial/{ruta_id}', [ControladorAdmin::class, 'ajustarOficial'])
     ->middleware('auth')->name('admin.oficial');
+
+Route::delete('/panelAdmin/invalidar/{ruta_id}', [ControladorAdmin::class, 'invalidar'])
+    ->middleware('auth')->name('admin.invalidar');
 
 Route::post('/subidaRuta', [ControladorRuta::class, 'store'])
      ->middleware('auth')

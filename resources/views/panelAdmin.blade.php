@@ -38,7 +38,7 @@
                                         <i class="bi bi-check-circle"></i>
                                     </button>
                                 </form>
-                                <form method="POST" action="{{ route('admin.invalidar', $ruta->id) }}">
+                                <form method="POST" action="{{ route('admin.eliminar', $ruta->id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-icono text-danger" title="Eliminar ruta">
@@ -77,12 +77,12 @@
                                         @endif
                                     </button>
                                 </form>
-                                <form method="POST" action="{{ route('admin.invalidar', $ruta->id) }}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn-icono text-danger" title="Eliminar ruta">
-                                            <i class="bi bi-x-circle"></i>
-                                        </button>
+                                <form method="POST" action="{{ route('admin.invalidar', $validacion->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn-icono text-danger" title="Invalidar ruta">
+                                        <i class="bi bi-x-circle"></i>
+                                    </button>
                                 </form>
                             </div>
                         </div>

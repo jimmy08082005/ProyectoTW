@@ -28,13 +28,16 @@ class ControladorAdmin extends Controller
         return redirect()->back()->with('success', 'Ruta validada correctamente.');
     }
 
-    public function invalidar($ruta_id)
+    public function eliminar($ruta_id)
     {
-        Ruta::findOrFail($ruta_id)->delete();
+        $ruta = Ruta::findOrFail($ruta_id);
+
         $imagenAnterior = public_path($ruta->imagen);
         if (file_exists($imagenAnterior)) {
             unlink($imagenAnterior);
         }
+    
+        $ruta->delete();
         return redirect()->back()->with('success', 'Ruta eliminada correctamente.');
     }
 
@@ -45,5 +48,13 @@ class ControladorAdmin extends Controller
         $validacion->save();
 
         return redirect()->back();
+    }
+
+    public function invalidar($ruta_id)
+    {
+        $validacion = Validacion::where('ruta_id', $ruta_id)->firstOrFail();
+    
+        $validacion->delete();
+        return redirect()->back()->with('success', 'Ruta invalidada correctamente.');
     }
 }
