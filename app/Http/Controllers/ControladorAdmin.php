@@ -53,8 +53,11 @@ class ControladorAdmin extends Controller
     public function invalidar($ruta_id)
     {
         $validacion = Validacion::where('ruta_id', $ruta_id)->firstOrFail();
-    
-        $validacion->delete();
+        
+        if ($validacion) {
+            $validacion->delete();
+        }
+
         return redirect()->back()->with('success', 'Ruta invalidada correctamente.');
     }
 }

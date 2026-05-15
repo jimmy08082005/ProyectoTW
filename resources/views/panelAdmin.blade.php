@@ -77,7 +77,7 @@
                                         @endif
                                     </button>
                                 </form>
-                                <form method="POST" action="{{ route('admin.invalidar', $validacion->id) }}">
+                                <form method="POST" action="{{ route('admin.invalidar', $validacion->ruta_id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-icono text-danger" title="Invalidar ruta">
