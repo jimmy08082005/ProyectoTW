@@ -37,9 +37,9 @@
             </div>
             <div class="mb-3">
               <label for="passwordInput" class="form-label">Contraseña</label>
-              <input type="text" class="form-control" id="userInput"
-              name="name" placeholder="Introduce tu nombre de usuario"
-              value="{{ old('name') }}" required autocomplete="off">
+              <input type="text" class="form-control" id="passwordInput"
+              name="password" placeholder="Introduce una contraseña"
+              value="{{ old('password') }}" required autocomplete="off">
             </div>
             <div class="mb-3">
               <label for="userInput" class="form-label">Nombre de Usuario</label>
