@@ -18,6 +18,7 @@ class ControladorLogin extends Controller
             'password' => 'required|min:6',
         ], [
             'name.required' => 'El nombre es obligatorio',
+            'name.unique'   => 'Este nombre de usuario ya está en uso',
             'name.min' => 'El nombre debe tener al menos 3 caracteres',
 
             'email.required' => 'El email es obligatorio',
