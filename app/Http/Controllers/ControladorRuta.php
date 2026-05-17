@@ -13,7 +13,7 @@ class ControladorRuta extends Controller
             'titulo'       => 'required|string|max:255|unique:rutas,titulo',
             'descripcion'  => 'required|string',
             'localizacion' => 'required|string|max:255',
-            'duracion'     => 'required|integer|min:0.1',
+            'duracion'     => 'required|numeric|min:0.1',
             'dificultad'   => 'required|in:Baja,Media,Alta,Extrema',
             'distancia'    => 'required|numeric|min:0',
             'tipo_de_ruta' => 'required|string|max:255',
