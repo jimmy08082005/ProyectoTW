@@ -85,11 +85,13 @@
                         <input type="file" class="form-control" name="imagen" accept="image/*">
                     </div>
 
-                    <div class="d-grid gap-2">
+                    <div class="text-center mb-3">
                         <button type="submit">Guardar cambios</button>
-                        <button type="submit" href="{{ route('panelUsuario') }}">Cancelar</a>
                     </div>
 
+                    <div class="text-center">
+                        <button type="submit" href="{{ route('panelUsuario') }}">Cancelar</a>
+                    </div>
                 </form>
             </div>
         </div>
